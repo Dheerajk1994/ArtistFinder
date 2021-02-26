@@ -19,8 +19,5 @@ releaseDate
 
 primaryGenreName
 
-Please use the programming that language that you’re most familiar and comfortable with.
-
-Testing: Including unit tests (preferably using TDD) is highly recommended as part of the coding exercise. 
 
 
