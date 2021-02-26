@@ -1,6 +1,7 @@
 package com.example.artistfinder.di.modules
 
 import android.content.Context
+import com.example.artistfinder.R
 import com.example.artistfinder.model.remote.NetworkService
 import dagger.Module
 import dagger.Provides
@@ -36,7 +37,6 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideHttpClient(loggingInterceptor : HttpLoggingInterceptor,
-                          context: Context,
                           cache: Cache) : OkHttpClient{
         return OkHttpClient.Builder()
             .cache(cache)
@@ -76,7 +76,7 @@ class NetworkModule {
         context: Context
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://itunes.apple.com") //TODO put this in resources
+            .baseUrl(context.resources.getString(R.string.itunes_base_url))
             .client(okHttpClient)
             .addCallAdapterFactory(rxJava2CallAdapterFactory)
             .addConverterFactory(gsonConverterFactory)

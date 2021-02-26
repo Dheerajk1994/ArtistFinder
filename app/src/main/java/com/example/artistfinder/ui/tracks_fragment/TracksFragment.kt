@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.artistfinder.R
 import com.example.artistfinder.model.result.TrackPoko
-import com.example.artistfinder.ui.TrackRVAdapter
 import com.example.artistfinder.utils.CustomApplication
 import kotlinx.android.synthetic.main.fragment_tracks.*
 import javax.inject.Inject

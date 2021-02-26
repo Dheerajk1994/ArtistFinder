@@ -1,12 +1,8 @@
 package com.example.artistfinder.di.modules
 
-import android.app.Application
 import android.content.Context
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.artistfinder.ui.TrackRVAdapter
-import com.example.artistfinder.viewmodel.MainActivityViewModel
+import com.example.artistfinder.ui.tracks_fragment.TrackRVAdapter
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -15,7 +11,7 @@ import javax.inject.Singleton
 class ActivityModule{
     @Provides
     @Singleton
-    fun provideTrackRVAdapter() : TrackRVAdapter{
+    fun provideTrackRVAdapter() : TrackRVAdapter {
         return TrackRVAdapter()
     }
 
