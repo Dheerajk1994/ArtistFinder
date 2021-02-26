@@ -1,4 +1,4 @@
-package com.example.artistfinder.ui
+package com.example.artistfinder.ui.tracks_fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -16,7 +16,9 @@ class TrackRVAdapter : RecyclerView.Adapter<DataViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
-        return TrackDataViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.track_card, parent, false))
+        return TrackDataViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.track_card, parent, false)
+        )
     }
 
     override fun getItemCount(): Int = trackData.size

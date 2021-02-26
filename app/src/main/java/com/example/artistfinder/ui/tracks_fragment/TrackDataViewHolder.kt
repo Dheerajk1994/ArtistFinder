@@ -1,4 +1,4 @@
-package com.example.artistfinder.ui
+package com.example.artistfinder.ui.tracks_fragment
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +9,8 @@ interface ITrackViewHolder {
     fun bindTrack(apiResult : TrackPoko)
 }
 
-abstract class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ITrackViewHolder
+abstract class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+    ITrackViewHolder
 
 class TrackDataViewHolder(itemView: View) : DataViewHolder(itemView){
     override fun bindTrack(apiResult: TrackPoko) {

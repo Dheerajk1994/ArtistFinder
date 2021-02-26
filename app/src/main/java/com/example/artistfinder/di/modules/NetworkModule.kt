@@ -37,7 +37,6 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideHttpClient(loggingInterceptor : HttpLoggingInterceptor,
-                          context: Context,
                           cache: Cache) : OkHttpClient{
         return OkHttpClient.Builder()
             .cache(cache)
