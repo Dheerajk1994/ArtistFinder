@@ -1,4 +1,5 @@
 Architecture: MVVM
+
 Main Tools/Libraries used: RxJava, Retrofit, OkHttp, HttpInterceptor
 
 Design and build an Android application that fetches and displays Artist data from the following iTunes url:
