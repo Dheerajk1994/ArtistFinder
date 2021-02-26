@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="2dp"
     android:elevation="4dp"
     app:cardCornerRadius="3dp">
 
@@ -15,9 +16,9 @@
             android:id="@+id/tv_artist_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="artist name"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:maxLines="1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -25,7 +26,6 @@
             android:id="@+id/tv_track_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="track name"
             app:layout_constraintTop_toBottomOf="@id/tv_artist_name"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -33,7 +33,6 @@
             android:id="@+id/tv_release_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jan 1, 2000"
             app:layout_constraintTop_toBottomOf="@id/tv_track_name"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -42,14 +41,13 @@
             android:id="@+id/tv_primary_genre_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rock"
             app:layout_constraintTop_toBottomOf="@id/tv_release_date"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
+            android:id="@+id/tv_track_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.00 $"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_artist_name"
             app:layout_constraintBottom_toBottomOf="@id/tv_primary_genre_name"/>
