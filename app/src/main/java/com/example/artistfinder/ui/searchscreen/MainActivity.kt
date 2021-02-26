@@ -1,8 +1,10 @@
 package com.example.artistfinder.ui.searchscreen
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupSearchButton() {
         btn_search_artist.setOnClickListener {
             val nameToSearch = et_artist_name.text.toString()
+            closeKeyBoard()
             if (nameToSearch.isNotBlank()) {
                 viewModel.searchArtist(nameToSearch)
             } else {
@@ -63,6 +66,14 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+        }
+    }
+
+    private fun closeKeyBoard(){
+        val view = this.currentFocus
+        if(view != null){
+            val inputManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputManager.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
 }
