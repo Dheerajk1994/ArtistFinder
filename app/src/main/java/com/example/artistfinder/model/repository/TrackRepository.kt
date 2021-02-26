@@ -18,7 +18,7 @@ open class TrackRepository @Inject constructor(private val networkService : Netw
         return networkService
             .getTracks(query)
             .map {
-                it.list
+                it.results
             }
     }
 }

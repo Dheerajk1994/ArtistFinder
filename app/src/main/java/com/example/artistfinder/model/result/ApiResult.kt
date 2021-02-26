@@ -1,6 +1,6 @@
 package com.example.artistfinder.model.result
 
-data class ApiResult(val list : MutableList<TrackPoko>)
+data class ApiResult(val results : MutableList<TrackPoko>)
 
 data class TrackPoko(
         var artistName : String,
