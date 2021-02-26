@@ -13,7 +13,7 @@ trackName                                                  TrackPrice
 
 releaseDate
 
-         primaryGenreName
+primaryGenreName
 
 Please use the programming that language that you’re most familiar and comfortable with.
 
