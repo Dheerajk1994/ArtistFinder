@@ -1,4 +1,4 @@
-package com.example.artistfinder
+package com.example.artistfinder.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,7 +8,7 @@ interface IMainActivityViewModel{
     fun searchArtist(name : String)
 }
 
-class MainActivityViewModel : ViewModel(), IMainActivityViewModel{
+class MainActivityViewModel : ViewModel(), IMainActivityViewModel {
     override val onArtistDataReceived: MutableLiveData<Boolean> = MutableLiveData()
 
     override fun searchArtist(name: String) {

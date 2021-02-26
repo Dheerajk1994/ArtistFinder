@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artistfinder.R
-import com.example.artistfinder.model.TrackData
+import com.example.artistfinder.model.result.TrackPoko
 
 class TrackRVAdapter : RecyclerView.Adapter<DataViewHolder>() {
 
-    private var trackData : MutableList<TrackData> = mutableListOf()
+    private var trackData : MutableList<TrackPoko> = mutableListOf()
 
-    fun setData(newTracks : List<TrackData>){
+    fun setData(newTracks : List<TrackPoko>){
         this.trackData = newTracks.toMutableList()
         notifyDataSetChanged()
     }
